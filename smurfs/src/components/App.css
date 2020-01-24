@@ -1,28 +1,40 @@
+html, body {
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url('../blueBG.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
+  padding-top: 3%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.addForm {
+  margin-top: 3%;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-title {
-  font-size: 1.5em;
+input {
+  margin: 10px 0;
+  width: 200px;
+  height: 30px;
 }
 
-.App-intro {
-  font-size: large;
+button {
+  height: 30px;
+  background-color: white;
+  border: 2px solid darkblue;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.addSmurf {
+  margin-top: 1%;
 }

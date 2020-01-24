@@ -24,7 +24,7 @@ const AddSmurfForm = props => {
     }
 
     return (
-        <div>
+        <div className='addForm'>
             <h2>Add a new Smurf</h2>
             <form onSubmit={handleSubmit}>
                     <input
@@ -48,7 +48,7 @@ const AddSmurfForm = props => {
                     value={newSmurf.height}
                     onChange={handleChanges}
                     />
-                    <button type='submit'>Moving Smurf to Village...</button>
+                    <button className='addSmurf'type='submit'>Moving Smurf to Village...</button>
             </form>
         </div>
         

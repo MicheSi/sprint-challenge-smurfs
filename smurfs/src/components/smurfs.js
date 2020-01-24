@@ -10,6 +10,7 @@ const Smurf = props => {
             {/* code for fetch start */}
             {props.isLoading && (
                 <div className='spinner'>
+
                     <Spinner type="grow" color="primary" />
                     <Spinner type="grow" color="secondary" />
                     <Spinner type="grow" color="success" />
@@ -21,7 +22,7 @@ const Smurf = props => {
             </div>
             )}
             {!props.name && !props.isLoading && (
-                <h2>Click button to get Smurfs</h2>
+                <h3>Click button to get Smurfs</h3>
             )}
             <button onClick={props.fetchSmurf}>Get Smurf</button>
             {/* code for fetch success */}
