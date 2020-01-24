@@ -1,28 +1,91 @@
+html, body {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+html {
+  /* background-image: url('../blueBG.jpg');
+  background-attachment: fixed;
+  background-size: cover; */
+  background-image: url('./smurf.png');
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
+  padding: 2% 0 4%;
+  font-family: 'Patrick Hand', cursive;
+  color: darkblue;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App h1 {
+  font-size: 48px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.smurfContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.smurfs {
+  margin-top: 2%;
+  text-align: center;
+  background-color: rgba(135, 206, 250, .5);
+  border-radius: 5px;
+  border: 2px solid darkblue;
+  width: 300px;
+  height: 175px;
+}
+
+.smurfs h2 {
+  font-size: 28px;
+}
+
+.smurfs p {
+  font-size: 18px;
+}
+
+.addForm {
+  margin-top: 3%;
+}
+
+.addForm h2 {
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin: 10px 0;
+  width: 250px;
+  height: 30px;
+  border: 1px solid darkblue;
+  padding-left: 5px;
+}
+
+button {
+  height: 40px;
+  background-color: lightskyblue;
   color: white;
+  border-radius: 5px;
+  border: 2px solid darkblue;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.getSmurfs {
+  width: 100px;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.addSmurf {
+  margin-top: 1%;
 }

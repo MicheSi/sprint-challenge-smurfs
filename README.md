@@ -23,10 +23,29 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+You no longer need to pass props down from one component to another component (prop drilling) and can store it in a context object instead.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+actions – events. They send data from the app to the store using action creators (functions that return an action).
+
+reducers – functions that take the current state of the app and return a new state. They don’t update state directly, but return a new state object.
+
+store – contains the state for our application. It’s the “single source of truth” because it is the sole source of our state tree. The state is immutable and cannot be changed, so that’s why we have reducers that clone the original state and produce a modified copy of the original.
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is global and can be used throughout the entire app while component state is local to that component. It would be a good idea to use application state if you have multiple components that will be changing the same state. Then you are able to keep your code DRY. If state is only changing on one component, then it would make sense to use component state over application state.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux-thunk is a middleware node package that allows our reducer flow to be asynchronous and create async API calls. It intercepts our action creators and acts on the returned data. If the return is an action, it passes it on through the reducer. If the thing being returned is a function, it invokes a thunk and passes the dispatch function to it. (Thunk is a function that is returned by another function.)
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+The reducer pattern – it allows us to store our functions and state changes in one place to call in on different components. I feel like it simplifies my code and keeps it much cleaner.
 
 ## Project Set Up
 
