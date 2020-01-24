@@ -6,6 +6,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import App from "./components/App";
+import {reducer} from './reducers';
 
 import "./index.css";
 
