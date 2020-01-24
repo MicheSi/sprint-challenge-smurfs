@@ -1,4 +1,4 @@
-import { FETCHING_SMURF_START } from "../actions";
+import { FETCHING_SMURF_START, FETCHING_SMURF_SUCCESS, FETCHING_SMURF_FAIL } from "../actions";
 
 
 const initialState = {
@@ -16,6 +16,20 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: true
+            }
+        case FETCHING_SMURF_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                name: action.payload,
+                age: action.payload,
+                height: action.payload,
+                id: action.payload,
+            }
+        case FETCHING_SMURF_FAIL:
+            return {
+                ...state,
+                error: action.payload
             }
         default:
             return state;
