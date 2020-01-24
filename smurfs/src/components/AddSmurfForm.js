@@ -19,6 +19,7 @@ const AddSmurfForm = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        props.postNewSmurf(newSmurf);
         setNewSmurf(initialState)
     }
 
