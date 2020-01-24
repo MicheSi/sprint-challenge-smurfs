@@ -5,10 +5,6 @@ const initialState = {
     isLoading: false,
     error: '',
     smurfs: []
-    // name: '',
-    // age: [],
-    // height: '',
-    // id: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -23,10 +19,6 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isLoading: false,
                 smurfs: action.payload
-                // name: action.payload,
-                // age: action.payload,
-                // height: action.payload,
-                // id: action.payload,
             }
         case FETCHING_SMURF_FAIL:
             return {

@@ -6,7 +6,7 @@ import {fetchSmurf} from '../actions';
 
 const Smurf = props => {
     return (
-        <div className='smurf'>
+        <div className='smurfContainer'>
             {/* code for fetch start */}
             {props.isLoading && (
                 <div className='spinner'>
@@ -21,18 +21,11 @@ const Smurf = props => {
                     <Spinner type="grow" color="dark" />
             </div>
             )}
-            <button onClick={props.fetchSmurf}>Get Smurfs</button>
+            <button className='getSmurfs' onClick={props.fetchSmurf}>Get Smurfs</button>
             {/* code for fetch success */}
-            {props.name && !props.isLoading && (
-                <div className='smurf'>
-                    <h2>{props.name.name}</h2>
-                    <p>Age: {props.age.age}</p>
-                    <p>Height: {props.height.height}</p>
-                </div>
-            )}
             {props.smurfs.map(smurf => {
                 return (
-                    <div className='smurf' key={smurf.id}>
+                    <div className='smurfs' key={smurf.id}>
                     <h2>{smurf.name}</h2>
                     <p>Age: {smurf.age}</p>
                     <p>Height: {smurf.height}</p>
