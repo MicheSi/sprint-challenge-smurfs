@@ -21,10 +21,7 @@ const Smurf = props => {
                     <Spinner type="grow" color="dark" />
             </div>
             )}
-            {!props.name && !props.isLoading && (
-                <h3>Click button to get Smurfs</h3>
-            )}
-            <button onClick={props.fetchSmurf}>Get Smurf</button>
+            <button onClick={props.fetchSmurf}>Get Smurfs</button>
             {/* code for fetch success */}
             {props.name && !props.isLoading && (
                 <div className='smurf'>
@@ -32,6 +29,16 @@ const Smurf = props => {
                     <p>Age: {props.age.age}</p>
                     <p>Height: {props.height.height}</p>
                 </div>
+            )}
+            {props.smurfs.map(smurf => {
+                return (
+                    <div className='smurf' key={smurf.id}>
+                    <h2>{smurf.name}</h2>
+                    <p>Age: {smurf.age}</p>
+                    <p>Height: {smurf.height}</p>
+                    </div>
+                )
+            }
             )}
 
         </div>
@@ -42,10 +49,11 @@ const mapStateToProps = state => {
     return {
         isLoading: state.isLoading,
         error: state.error,
-        name: state.name,
-        age: state.age,
-        height: state.height,
-        id: state.id
+        smurfs: state.smurfs
+        // name: state.name,
+        // age: state.age,
+        // height: state.height,
+        // id: state.id
     }
 }
 

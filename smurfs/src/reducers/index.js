@@ -4,10 +4,11 @@ import { FETCHING_SMURF_START, FETCHING_SMURF_SUCCESS, FETCHING_SMURF_FAIL } fro
 const initialState = {
     isLoading: false,
     error: '',
-    name: '',
-    age: [],
-    height: '',
-    id: ''
+    smurfs: []
+    // name: '',
+    // age: [],
+    // height: '',
+    // id: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -21,10 +22,11 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                name: action.payload,
-                age: action.payload,
-                height: action.payload,
-                id: action.payload,
+                smurfs: action.payload
+                // name: action.payload,
+                // age: action.payload,
+                // height: action.payload,
+                // id: action.payload,
             }
         case FETCHING_SMURF_FAIL:
             return {
